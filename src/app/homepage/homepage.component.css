@@ -1,0 +1,66 @@
+.mainHeading1 {
+    font-style: normal;
+    color: #fff;
+    font-weight: 700;
+    font-size: 62px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+.mainHeading3{
+    font-style: normal;
+    color: #fff;
+    font-weight: 500;
+    font-size: 52px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+.mainHeading5{
+    font-style: normal;
+    color: #fff;
+    font-weight: 100;
+    font-size: 42px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+
+.main-container{
+    background-color: #E21717;
+     padding: 5vw;
+     height: 32rem;
+}
+
+.productHeading{
+    font-style: normal;
+    /* color: ; */
+    font-weight: 700;
+    font-size: 52px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+/* .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 5px -1px rgba(0,0,0,1), 
+                0 1px 1px 0 rgba(0,0,0,1), 
+                0 1px 3px 0 rgba(0,0,0,1);
+} */
+
+::ng-deep .mat-card{
+
+    border: 1px solid #e0e0e0;
+    border-radius: 30px !important;
+    border: #000 !important;
+   }
+
+   .mat-card {
+    padding: 50px;    
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+    margin-left: 5%;
+  }
+  
+  .mat-card:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
