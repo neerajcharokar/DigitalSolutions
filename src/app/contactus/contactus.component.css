@@ -1,0 +1,96 @@
+.main-container{
+    padding: 5vw;
+    height: 35rem;
+    background-image: linear-gradient(#8d0707, #D31A50);
+    /* background-position: center; */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/about.jpg'); */
+}
+
+.productHeading{
+    font-style: normal;
+    /* color: ; */
+    font-weight: 700;
+    font-size: 52px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+
+agm-map {
+    height: 300px;
+  }
+
+.contactus{
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #212121;
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+
+.contactHeading{
+    font-style: normal;
+    /* color: ; */
+    font-weight: 700;
+    font-size: 52px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+
+.contactMail{
+    color: #8d0707;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.aboutUsHeading{
+    font-style: normal;
+    color: #fff;
+    font-weight: 500;
+    font-size: 92px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+    margin-top: 10rem;
+}
+
+@media screen and (min-width: 601px) {
+    
+}
+
+@media screen and (max-width: 601px) {
+    .main-container{
+        padding: 5vw;
+        height: 35rem;
+        background-image: linear-gradient(#8d0707, #D31A50);
+    }
+    .aboutUsHeading{
+        font-size: 52px;
+        margin-top: 6rem;
+        margin-left: 1rem;
+        font-weight: 700;
+    }
+}
+
+.headAvatar {
+    background-image: url('../../assets/headAvatar.png');
+    background-size: cover;
+  }
+
+.branchAvatar{
+    background-image: url('../../assets/branchAvatar.png');
+    background-size: cover;
+}
+
+.addressSpan{
+    font-family:Proxima Nova; 
+    font-size: 1rem; 
+    font-weight: 500;
+    /* margin-left: 0.5rem; */
+}

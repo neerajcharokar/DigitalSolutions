@@ -2,7 +2,196 @@
     flex: 1 1 auto;
   }
 
-.matTabLink{
-    color: #E07C24;
-    font-size: larger;
+  body{
+    overflow-x: hidden;
+  }
+  
+
+  .mainHeading1 {
+    font-style: normal;
+    color: #fff;
+    font-weight: 700;
+    font-size: 62px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
 }
+.mainHeading3{
+    font-style: normal;
+    color: #fff;
+    font-weight: 500;
+    font-size: 52px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+.mainHeading5{
+    font-style: normal;
+    color: #fff;
+    font-weight: 100;
+    font-size: 42px;
+    /* line-height: 72px; */
+    letter-spacing: -.5px;
+    font-family: Proxima Nova;
+}
+
+.productHeading{
+  font-style: normal;
+  /* color: ; */
+  font-weight: 700;
+  font-size: 52px;
+  /* line-height: 72px; */
+  letter-spacing: -.5px;
+  font-family: Proxima Nova;
+} 
+
+.logo em{
+  font-style: normal;
+  color: #a80a0a;
+  font-weight: 700;
+  font-size: 42px;
+  /* line-height: 72px; */
+  letter-spacing: -.5px;
+  font-family: Proxima Nova;
+}
+
+.logo{
+  font-style: normal;
+  /* color: #a80a0a; */
+  font-weight: 700;
+  font-size: 32px;
+  /* line-height: 72px; */
+  letter-spacing: -.5px;
+  font-family: Proxima Nova;
+}
+
+.splashScreen em{
+  font-style: normal;
+  color: #a80a0a;
+  font-weight: 900;
+  font-size: 72px;
+  /* line-height: 72px; */
+  letter-spacing: -.5px;
+  font-family: Proxima Nova;
+  animation-name: splashEm;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  text-shadow:3px 3px 8px black;
+  
+}
+
+.splashScreen{
+  font-style: normal;
+  /* color: #a80a0a; */
+  font-weight: 700;
+  font-size: 52px;
+  /* line-height: 72px; */
+  letter-spacing: -.5px;
+  font-family: Proxima Nova;
+  animation-name: splash;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  text-shadow:3px 3px 8px black;
+}
+
+.splashImg{
+  width: 60%;
+}
+
+@keyframes splashEm {
+  from {font-size: 72px;text-shadow:3px 3px 8px black;}
+  to {font-size: 92px;text-shadow:10px 10px 20px black;}
+}
+
+@keyframes splash {
+  from {font-size: 52px;text-shadow:3px 3px 8px black;}
+  to {font-size: 72px;text-shadow:10px 10px 20px black;}
+}
+
+
+
+
+.matTabLink{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: black;
+    font-family: Proxima Nova;
+    opacity: 1; 
+}
+
+/* .mat-tab-link {
+  opacity: 1;
+} */
+
+
+/* .mat-tab-link:focus {
+  color: #E21717
+} */
+
+.footer-container{
+  background-color: #a80a0a;
+   padding: 5vw;
+   height: 23rem;
+}
+
+.splashRow{
+  margin-top: 12%;
+}
+
+@media screen and (min-width: 601px) {
+    
+}
+
+@media screen and (max-width: 601px) {
+  .matTabLink{
+    font-size: 1rem;
+    margin: 0rem;
+  }
+  .footer-container{
+    height: 45rem;
+  }
+
+  .splashRow{
+    margin-top: 50%;
+  }
+
+  .splashScreen{
+    font-size: 32px;
+  }
+
+  .splashScreen em{
+    font-size: 52px;
+  }
+
+  @keyframes splashEm {
+    from {font-size: 52px;text-shadow:3px 3px 8px black;}
+    to {font-size: 62px;text-shadow:10px 10px 20px black;}
+  }
+  
+  @keyframes splash {
+    from {font-size: 32px;text-shadow:3px 3px 8px black;}
+    to {font-size: 42px;text-shadow:10px 10px 20px black;}
+  }
+
+}
+.findMoreComponents{
+  font-family:Proxima Nova; 
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.social{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: #B4161B !important;
+  }

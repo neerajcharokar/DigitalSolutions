@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import {MatCardModule} from '@angular/material/card';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDwtw9VyxKcaUrPYy4d3_t_aSnQgwvE9bs'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

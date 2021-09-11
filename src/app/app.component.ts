@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';
 
 @Component({
@@ -11,8 +11,10 @@ import { slideInAnimation } from './animations';
     // animation triggers go here
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'DigitalSolutions';
+  splashScreen:boolean=false;
+  constructor(private router:Router){}
   navLinks = [
     { path: 'home', label: 'Home' },
     { path: 'aboutus', label: 'About Us' },
@@ -20,5 +22,21 @@ export class AppComponent {
   ];
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
+  ngOnInit(){
+    setTimeout(() => {
+      this.splashScreen=true
+      
+    }, 3000);
+  }
+  
+  switchURL(page:any){
+    if(page==='home'){
+      this.router.navigateByUrl('/home');
+    }else if(page==='aboutus'){
+      this.router.navigateByUrl('/aboutus');
+    }else if(page==='contactus'){
+      this.router.navigateByUrl('/contactus');
+    }
   }
 }

@@ -1,26 +1,91 @@
 <html>
-  <head>
-    <script src="https://kit.fontawesome.com/4985b9bbe6.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-<div class="text-center">
-  <span class="display-1">Digital Solutions</span>
-  
-</div>
-<nav mat-tab-nav-bar >
-  <a mat-tab-link class="matTabLink"
-     *ngFor="let link of navLinks"
-     active='true'
-     [routerLink]="link.path"
-     routerLinkActive #rla="routerLinkActive"
-     [routerLinkActiveOptions]="{exact:true}"
-     [active]="rla.isActive">
-    {{link.label}}
-  </a>
-</nav>
 
-<div [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
-</div>
-  </body>
+<head>
+  <script src="https://kit.fontawesome.com/4985b9bbe6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid" [hidden]="splashScreen">
+    <div class="row splashRow">
+      <div class="splashScreenClass" style="text-align: center;" id="splashScreenClass">
+        <span class="h3 text-center splashScreen"><em>D</em>igital </span>
+        <span class="h3 text-center splashScreen"><em>S</em>olutions</span>
+      </div>
+    </div>
+    <div class="row" style="text-align: center;">
+      <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-sm-12">
+      <img class="splashImg" src="assets/splash2.png" alt="">
+    </div>
+    </div>
+  </div>
+  <div [hidden]="!splashScreen">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="text-center col-md-4 pt-3" style="cursor: pointer;" (click)="switchURL('home')">
+          <span class="h3 text-center logo"><em>D</em>igital </span>
+          <span class="h3 text-center logo"><em>S</em>olutions</span>
+        </div>
+        <div class="col-md-8">
+          <nav mat-tab-nav-bar class="nav-bar">
+            <a mat-tab-link class="matTabLink" [ngStyle]="{'color': (rla.isActive) ? '#B4161B' : 'black'}"
+              *ngFor="let link of navLinks" active='true' [routerLink]="['/'+link.path]" routerLinkActive
+              #rla="routerLinkActive" [routerLinkActiveOptions]="{exact:true}" isActive [active]="rla.isActive">
+              {{link.label}}
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div [@routeAnimations]="prepareRoute(outlet)" style="margin-top: 2px;">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <div class="row footer-container">
+      <div class="col-sm-12 col-md-3 text-white text-left">
+        <h3 style="font-family:Proxima Nova; font-size: 1.8rem;font-weight: bolder;text-decoration: underline;">
+          Find More</h3>
+        <h5 class="findMoreComponents" (click)="switchURL('home')">Home</h5>
+        <h5 class="findMoreComponents" (click)="switchURL('aboutus')">About Us</h5>
+        <h5 class="findMoreComponents" (click)="switchURL('contactus')">Contact Us</h5>
+      </div>
+      <div class="col-sm-12 col-md-4 offset-md-1 text-white text-left">
+        <h3 style="font-family:Proxima Nova; font-size: 1.8rem;font-weight: bolder;text-decoration: underline;">
+          Address</h3>
+        <h5 style="font-family:Proxima Nova; font-size: 1.2rem;margin-top: 1rem;font-weight: bold;">We'd love to
+          hear from you</h5>
+        <h5 style="font-family:Proxima Nova; font-size: 1rem;">We are always available to address the needs of
+          our users.</h5>
+        <div class="mt-3">
+          <img src="assets/phone-call.png" alt=""><a class="social" href="tel:8878491944"
+            style="font-family:Proxima Nova; font-size: 1rem; margin-left: 0.5rem;">+91-8878491944</a>
+        </div>
+
+        <div class="mt-3">
+          <img src="assets/location.png" alt=""><span
+            style="font-family:Proxima Nova; font-size: 1rem; margin-left: 0.5rem;"><b>Head Office:</b> Sky Space, Ground Floor, 290-291,
+            PU4,Behind Malhar Mega Mall, Vijay Nagar, Indore 452010.</span>
+        </div>
+
+        <div class="mt-3">
+          <img src="assets/email.png" alt=""><a class="social" href="mailto:admin@digitalsolutionsmp.com"
+            style="font-family:Proxima Nova; font-size: 1rem; margin-left: 0.5rem;">admin@digitalsolutionsmp.com
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-2 offset-md-1 text-white text-left">
+        <h3 style="font-family:Proxima Nova; font-size: 1.8rem;font-weight: bolder;text-decoration: underline;">Follow
+          us on</h3>
+        <a class="social" target="_blank" href="https://www.instagram.com/digital_solutionsmp/"
+          style="font-family:Proxima Nova; font-size: 1rem;"><img src="assets/facebook.png" alt=""> Facebook</a><br><br>
+        <a class="social" target="_blank" href="https://www.instagram.com/digital_solutionsmp/"
+          style="font-family:Proxima Nova; font-size: 1rem;"><img src="assets/instagram.png" alt="">
+          Instagram</a><br><br>
+        <a class="social" target="_blank" href="https://www.instagram.com/digital_solutionsmp/"
+          style="font-family:Proxima Nova; font-size: 1rem;"><img src="assets/twitter.png" alt=""> Twitter</a><br><br>
+        <a class="social" target="_blank" href="http://linkedin.com/in/digital-solutions-00371a21b"
+          style="font-family:Proxima Nova; font-size: 1rem;"><img src="assets/linkedin.png" alt=""> Linkedin</a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

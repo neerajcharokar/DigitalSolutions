@@ -19,7 +19,7 @@
 .mainHeading5{
     font-style: normal;
     color: #fff;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 42px;
     /* line-height: 72px; */
     letter-spacing: -.5px;
@@ -27,10 +27,27 @@
 }
 
 .main-container{
+    /* background-color: #a80a0a; */
+    background-image: linear-gradient(#8d0707, #D31A50);
+     padding: 5vw;
+     height: 35rem;
+}
+
+.footer-container{
     background-color: #E21717;
      padding: 5vw;
-     height: 32rem;
+     height: 23rem;
 }
+
+@media screen and (min-width: 601px) {
+    
+  }
+
+  @media screen and (max-width: 601px) {
+    .footer-container{
+         height: 35rem;
+    }
+  }
 
 .productHeading{
     font-style: normal;
@@ -63,4 +80,11 @@
   
   .mat-card:hover {
     transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .findMoreComponents{
+    font-family:Proxima Nova; 
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
   }
