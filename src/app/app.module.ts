@@ -28,10 +28,7 @@ import { AgmCoreModule } from '@agm/core';
     MatIconModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDwtw9VyxKcaUrPYy4d3_t_aSnQgwvE9bs'
-    })
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
