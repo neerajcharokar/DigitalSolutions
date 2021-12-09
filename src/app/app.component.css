@@ -190,6 +190,13 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 22px;
+  width: 100%; /* or max-width: 100%; */
+  height: auto;
+}
+
+.addressIcon{
+  width: auto; /* or max-width: 100%; */
+  height: auto;
 }
 
 ::ng-deep .mat-ink-bar {
